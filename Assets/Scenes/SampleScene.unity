@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 1933591952}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,7 +552,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c07912cb3c30104f8b07699f4bc91f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 20
   speed: 5
+  bodyDamage: 1
+  invincibleTime: 0.5
   shootDelay: 0.5
   shootSpeed: 10
   bulletPrefab: {fileID: 7385382171978496924, guid: 53accdf738c3c8d4995e5b9b3c6b1c64, type: 3}

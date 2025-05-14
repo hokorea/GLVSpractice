@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -6,6 +7,7 @@ public class Enemy : MonoBehaviour
     public float speed;
 
     public int hp;
+    public int bodyDamage;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,22 +21,22 @@ public class Enemy : MonoBehaviour
         Move();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
-
     void Move()
     {
         transform.position = Vector3.MoveTowards(gameObject.transform.position, player.transform.position, speed);
     }
 
-    public void Hit(int Damage)
+    public void Hit(int damage)
     {
-        hp -= Damage;
+        hp -= damage;
         if (hp <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    public virtual void Attack()
+    {
+
     }
 }
